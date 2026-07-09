@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test
+...
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    app: myapp
+    namespace: test
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+      ports:
+        - name: nginx-port
+          containerPort: 80
