@@ -25,6 +25,6 @@ spec:
     app: myapp
   ports:
     - name: nginxsvc-port
-      portocol: TCP
+      protocol: TCP
       port: 80
       targetPort: 80
