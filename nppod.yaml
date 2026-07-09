@@ -16,9 +16,9 @@ spec:
 apiVersion : v1
 kind: Service
 metadata:
-  name: nppod-service
-  labels:
-    app: nppod
+    name: nppod-service
+    labels:
+     app: nppod
 spec:
   type: NodePort
   selector: 
