@@ -11,3 +11,20 @@ spec:
       ports:
        - name: nginxport
          containerPort: 80
+...
+---
+apiversion: v1
+kind: service
+metadata:
+  name: ciservice
+  labels:
+    app: myapp
+spec:
+  type: ClusterIP
+  selector:
+    app: myapp
+  ports:
+    - name: nginxsvc-port
+      portocol: TCP
+      port: 80
+      targetport: 80
