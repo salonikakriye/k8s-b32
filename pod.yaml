@@ -3,12 +3,11 @@ kind: Pod
 metadata:
   name: mypod
   labels:
-    app=myapp
-    env=devops
+     app: myapp
 spec:
- containers:
-   - name: nginx-cont
-     image: nginx
-     ports:
-      - name: mginxport
-        containerport: 80
+  containers:
+    - name: nginx-cont
+      image: nginx
+      ports:
+       - name: mginxport
+         containerport: 80
