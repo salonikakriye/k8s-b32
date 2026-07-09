@@ -9,5 +9,5 @@ spec:
     - name: nginx-cont
       image: nginx
       ports:
-       - name: mginxport
-         containerport: 80
+       - name: nginxport
+         containerPort: 80
