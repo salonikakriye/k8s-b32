@@ -25,6 +25,6 @@ spec:
     app: nppod
   ports:
     - name: httpdsvc-port
-      portcol: TCP
+      protcol: TCP
       port: 80
       targetPort: 80
