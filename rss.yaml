@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Replicast
+metadata:
+  name: my-rs
+  labels:
+    app: myapp
+spec:
+  replicas: 5
+  selector:
+  metchLabels:
+    app: myapp
+  template:
+      metadata: 
+      name: my-rc-template
+      labels:
+        app: myapp
+  spec: 
+    containers: mycont
+    image: salonikakriye/myrepository
+    ports:
+      - name: nginxport
+        containerPort: 80
+...
+---
+apiVersion: apps/v1
+kind: Service
+metadata: 
+  name: rs-svc
+  labels:
+    app: myapp
+  spec:
+    type: Nodeport
+    selector:
+      app: myapp
+    port:
+    - name: myportsvc
+      protocol: TCP
+      port: 80
+      targetPort: 80 
