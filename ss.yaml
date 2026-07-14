@@ -3,7 +3,12 @@ kind: statefulset
 metadata:
   name: mysql
   labels:
-    app: myapp
+    app: myapp 
+spec: 
+  replicas: 3
+  selector:
+    matchlabels: 
+      app: myapp
     template:
     metadata:
       name: mysql-template
