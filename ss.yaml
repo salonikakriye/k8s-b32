@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: statefulset
+metadata:
+  name: mysql
+  labels:
+    app: myapp
+    template:
+    metadata:
+      name: mysql-template
+      labels:
+        app: myapp
+      spec:
+      containers: 
+        - name: mysql-container
+          image: mysql:8.0
+          ports:
+            - name: mysql-port
+              containers: 3306
+          env:
+            - name: MSQL_USER
+              value: admin
+            - name: MYSQL_PASSWORD
+              value: admin123
+            - name: MSQL_DATABASE
+              value: studentapp
+            - name: MYSQL_ROOT_PASSWORD
+              value: root 
+                      
+
