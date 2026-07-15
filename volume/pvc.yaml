@@ -6,7 +6,7 @@ metadata:
    app: myapp
 spec: 
   resources:
-    request: 
+    requests: 
      storage: 5Gi
   storageClassName: standard
   accessModes:
