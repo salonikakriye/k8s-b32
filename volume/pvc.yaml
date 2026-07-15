@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: my-pvc
   labels:
-  app: myapp
+   app: myapp
 spec: 
   resources:
     request: 
