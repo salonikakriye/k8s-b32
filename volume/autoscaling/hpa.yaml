@@ -1,4 +1,4 @@
-apiVersion: atuscaling/v2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscalar
 metadata:
   name: hpa
