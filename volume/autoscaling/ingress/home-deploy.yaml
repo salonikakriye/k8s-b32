@@ -3,24 +3,24 @@ kind: Deployment
 metadata:
   name: home-Deployment
   labels: 
-     app: home 
+    app: home 
 spec:
-   replicas: 1
-   selector:
-     matchLables:
-       app: home
-   template: 
-      metadata:
-        name: home-template
-        labels:
-          app: home
-      spec:
-         containers:
-            - name: nginx-container
-              image: nginx:latest
-              port:
-              - name: my-port 
-                containerPort: 80
+  replicas: 1
+  selector:
+    matchLables:
+      app: home
+  template: 
+    metadata:
+      name: home-template
+      labels:
+        app: home
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:latest
+        port:
+        - name: my-port 
+          containerPort: 80
 ...
 ---
 apiVersion: v1
@@ -60,8 +60,7 @@ spec:
       target: 
         type: Utilization 
         averageUtilization: 40
-
-
+... 
 
 
 
