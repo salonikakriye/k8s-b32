@@ -1,7 +1,7 @@
 apiVersion: aaps/v1
 kind: Deployment
 metadata:
-  name: home-Deployment
+  name: home-deployment
   labels: 
     app: home 
 spec:
