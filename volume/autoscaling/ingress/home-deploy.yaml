@@ -10,17 +10,17 @@ spec:
      matchLables:
        app: home
    template: 
-     metadata:
-       name: home-template
-       labels:
-         app: home
-   spec:
-      containers:
-         - name: nginx-container
-           image: nginx:latest
-           port:
-           - name: my-port 
-             containerPort: 80
+      metadata:
+        name: home-template
+        labels:
+          app: home
+      spec:
+         containers:
+            - name: nginx-container
+              image: nginx:latest
+              port:
+              - name: my-port 
+                containerPort: 80
 ...
 ---
 apiVersion: v1
