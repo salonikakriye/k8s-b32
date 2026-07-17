@@ -30,7 +30,7 @@ metadata:
   labels:
     app: home
 spec: 
-  type: ClusterIp
+  type: ClusterIP
   selector:
     app: home
   ports:
@@ -61,7 +61,6 @@ spec:
         type: Utilization 
         averageUtilization: 40
 ... 
-
 
 
 
